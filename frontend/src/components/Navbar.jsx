@@ -36,6 +36,7 @@ export const Navbar = () => {
   const languages = [
     { code: 'cs', label: 'Čeština', flag: '🇨🇿' },
     { code: 'ru', label: 'Русский', flag: '🇷🇺' },
+    { code: 'uk', label: 'Українська', flag: '🇺🇦' },
     { code: 'en', label: 'English', flag: '🇬🇧' },
   ];
 
@@ -149,7 +150,7 @@ export const Navbar = () => {
                 </Link>
               ))}
               
-              <div className="flex items-center gap-2 py-2">
+              <div className="flex items-center gap-2 py-2 flex-wrap">
                 {languages.map((lang) => (
                   <button
                     key={lang.code}
@@ -160,7 +161,7 @@ export const Navbar = () => {
                         : 'bg-gray-100 text-[#0F172A]'
                     }`}
                   >
-                    {lang.code.toUpperCase()}
+                    {lang.flag} {lang.code.toUpperCase()}
                   </button>
                 ))}
               </div>

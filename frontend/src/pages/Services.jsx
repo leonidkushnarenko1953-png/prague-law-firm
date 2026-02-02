@@ -2,11 +2,12 @@ import { useLanguage } from '../contexts/LanguageContext';
 import { Link } from 'react-router-dom';
 import { Button } from '../components/ui/button';
 import { 
-  Building2, 
-  Globe, 
-  Users, 
   Scale, 
+  Building2, 
+  Home, 
   Briefcase, 
+  Shield, 
+  Globe,
   FileText,
   CheckCircle
 } from 'lucide-react';
@@ -37,11 +38,68 @@ const ServicesPage = () => {
       <section className="py-20 md:py-32 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-            {/* Corporate Law */}
+            {/* Czech Court Proceedings */}
             <ServiceCard 
-              icon={Building2} 
-              titleKey="corporate"
-              details={['Zakládání společností (s.r.o., a.s.)', 'Fúze a akvizice', 'Smluvní právo', 'Obchodní spory', 'Due diligence']}
+              icon={Scale} 
+              titleKey="courts"
+              details={[
+                'Представительство в судах всех инстанций',
+                'Подготовка исковых заявлений',
+                'Апелляционные и кассационные жалобы',
+                'Исполнительное производство'
+              ]}
+              t={t}
+            />
+            
+            {/* Civil Cases */}
+            <ServiceCard 
+              icon={FileText} 
+              titleKey="civil"
+              details={[
+                'Возмещение ущерба',
+                'Договорные споры',
+                'Защита прав потребителей',
+                'Наследственные дела'
+              ]}
+              t={t}
+            />
+            
+            {/* Real Estate */}
+            <ServiceCard 
+              icon={Home} 
+              titleKey="housing"
+              details={[
+                'Купля-продажа недвижимости',
+                'Проверка юридической чистоты',
+                'Арендные договоры',
+                'Споры с ТСЖ и управляющими компаниями'
+              ]}
+              t={t}
+            />
+            
+            {/* Business Law */}
+            <ServiceCard 
+              icon={Briefcase} 
+              titleKey="business"
+              details={[
+                'Регистрация компаний (s.r.o., a.s.)',
+                'Корпоративные споры',
+                'Слияния и поглощения',
+                'Ликвидация и банкротство'
+              ]}
+              t={t}
+            />
+            
+            {/* Criminal Law */}
+            <ServiceCard 
+              icon={Shield} 
+              titleKey="criminal"
+              details={[
+                'Защита в уголовных делах',
+                'Представительство в полиции',
+                'Экстрадиция и международные дела',
+                'Экономические преступления'
+              ]}
               t={t}
             />
             
@@ -49,39 +107,25 @@ const ServicesPage = () => {
             <ServiceCard 
               icon={Globe} 
               titleKey="immigration"
-              details={['Pracovní povolení', 'Trvalý pobyt', 'Občanství ČR', 'Zaměstnanecké karty', 'Zastupování před OAMP']}
+              details={[
+                'Визы и виды на жительство',
+                'Обжалование отказов',
+                'Получение гражданства',
+                'Разрешения на работу'
+              ]}
               t={t}
             />
             
-            {/* Family Law */}
+            {/* Other */}
             <ServiceCard 
-              icon={Users} 
-              titleKey="family"
-              details={['Rozvody', 'Výživné', 'Péče o děti', 'Majetkové vypořádání', 'Předmanželské smlouvy']}
-              t={t}
-            />
-            
-            {/* Criminal Law */}
-            <ServiceCard 
-              icon={Scale} 
-              titleKey="criminal"
-              details={['Obhajoba v trestních řízeních', 'Zastupování poškozených', 'Hospodářské trestné činy', 'Přípravné řízení', 'Odvolací řízení']}
-              t={t}
-            />
-            
-            {/* Civil Law */}
-            <ServiceCard 
-              icon={FileText} 
-              titleKey="civil"
-              details={['Nemovitosti', 'Dědické řízení', 'Náhrada škody', 'Smluvní vztahy', 'Vymáhání pohledávek']}
-              t={t}
-            />
-            
-            {/* Labor Law */}
-            <ServiceCard 
-              icon={Briefcase} 
-              titleKey="labor"
-              details={['Pracovní smlouvy', 'Ukončení pracovního poměru', 'Pracovní spory', 'Kolektivní vyjednávání', 'Outplacement']}
+              icon={Building2} 
+              titleKey="other"
+              details={[
+                'Разблокировка банковских счетов',
+                'Семейное право и разводы',
+                'Трудовые споры',
+                'Административное право'
+              ]}
               t={t}
             />
           </div>
@@ -113,10 +157,10 @@ const ServicesPage = () => {
       <section className="py-20 bg-[#0F172A]">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="font-['Playfair_Display'] text-3xl md:text-4xl font-semibold text-white mb-6">
-            Potřebujete právní pomoc?
+            {t('booking.title')}
           </h2>
           <p className="text-gray-400 mb-8">
-            Kontaktujte nás pro nezávaznou konzultaci.
+            {t('booking.subtitle')}
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link to="/booking">

@@ -40,12 +40,13 @@ const BookingPage = () => {
   const locales = { cs, ru, en: enUS };
 
   const services = [
-    { value: 'corporate', label: t('services.corporate.title') },
-    { value: 'immigration', label: t('services.immigration.title') },
-    { value: 'family', label: t('services.family.title') },
-    { value: 'criminal', label: t('services.criminal.title') },
+    { value: 'courts', label: t('services.courts.title') },
     { value: 'civil', label: t('services.civil.title') },
-    { value: 'labor', label: t('services.labor.title') }
+    { value: 'housing', label: t('services.housing.title') },
+    { value: 'business', label: t('services.business.title') },
+    { value: 'criminal', label: t('services.criminal.title') },
+    { value: 'immigration', label: t('services.immigration.title') },
+    { value: 'other', label: t('services.other.title') }
   ];
 
   useEffect(() => {

@@ -7,62 +7,87 @@ const translations = {
       about: 'O nás',
       services: 'Služby',
       team: 'Tým',
-      blog: 'Blog',
+      blog: 'Publikace',
       contact: 'Kontakt',
       booking: 'Konzultace'
     },
     hero: {
-      title: 'Kušnarenková',
+      title: 'Kušnarenko',
       titleHighlight: '& partneři',
-      subtitle: 'Advokátní kancelář v Praze s více než 20letou zkušeností v oblasti obchodního, imigračního a občanského práva.',
+      subtitle: 'Váš osobní advokát v Praze. Člen České a Ukrajinské advokátní komory s více než 20letou praxí v oblasti obchodního, imigračního a trestního práva.',
       cta: 'Objednat konzultaci',
       secondary: 'Naše služby'
     },
+    features: {
+      experience: {
+        title: 'Velké zkušenosti',
+        desc: 'Maximálně využíváme nabyté advokátní zkušenosti. Hlavní cíl - úspěch, vítězství v případu.'
+      },
+      services: {
+        title: 'Široký rozsah služeb',
+        desc: 'Nabízíme takový objem služeb, jehož součásti jsou ověřeny v praxi.'
+      },
+      professionalism: {
+        title: 'Vysoká profesionalita',
+        desc: 'Snažíme se maximálně přilákat k řešení úkolů experty vysoké úrovně.'
+      }
+    },
     services: {
-      title: 'Naše služby',
-      subtitle: 'Poskytujeme komplexní právní služby pro jednotlivce i firmy',
-      corporate: {
-        title: 'Obchodní právo',
-        desc: 'Zakládání společností, fúze a akvizice, smluvní právo, obchodní spory.'
-      },
-      immigration: {
-        title: 'Imigrační právo',
-        desc: 'Pracovní povolení, trvalý pobyt, občanství, zastupování před cizineckou policií.'
-      },
-      family: {
-        title: 'Rodinné právo',
-        desc: 'Rozvody, výživné, péče o děti, majetkové vypořádání.'
-      },
-      criminal: {
-        title: 'Trestní právo',
-        desc: 'Obhajoba v trestních řízeních, zastupování poškozených.'
+      title: 'Poskytujeme služby',
+      subtitle: 'Komplexní právní služby pro jednotlivce i firmy',
+      courts: {
+        title: 'České soudnictví',
+        desc: 'Zastupování v soudních řízeních, odvolání, kasace.'
       },
       civil: {
         title: 'Občanské právo',
-        desc: 'Nemovitosti, dědictví, náhrada škody, smluvní vztahy.'
+        desc: 'Občanskoprávní spory, náhrada škody, smluvní vztahy.'
       },
-      labor: {
-        title: 'Pracovní právo',
-        desc: 'Pracovní smlouvy, ukončení pracovního poměru, pracovní spory.'
+      housing: {
+        title: 'Nemovitosti a bytové právo',
+        desc: 'Koupě a prodej nemovitostí, nájemní vztahy, SVJ.'
+      },
+      business: {
+        title: 'Obchodní advokát',
+        desc: 'Zakládání společností, fúze, akvizice, obchodní spory.'
+      },
+      criminal: {
+        title: 'Trestní advokát',
+        desc: 'Obhajoba v trestních řízeních, zastupování na policii.'
+      },
+      immigration: {
+        title: 'Imigrační právo',
+        desc: 'Víza, pobytová povolení, odvolání proti zamítnutí, občanství.'
+      },
+      other: {
+        title: 'Další oblasti práva',
+        desc: 'Odblokování bankovních účtů, rodinné právo a další.'
       }
     },
     about: {
-      title: 'O naší kanceláři',
-      subtitle: 'Profesionalita. Důvěra. Výsledky.',
-      text1: 'Advokátní kancelář Kušnarenková & partneři byla založena v roce 2003 v Praze. Od té doby jsme úspěšně zastupovali stovky klientů z celého světa.',
-      text2: 'Naším cílem je poskytovat právní služby nejvyšší kvality s důrazem na individuální přístup ke každému klientovi.',
+      title: 'Vítáme vás',
+      subtitle: 'Děkujeme za zájem o naši práci!',
+      text1: 'Advokát - Magistr práva Leonid Kušnarenko – Mgr. Leonid Kushnarenko (Kušnarenko): Člen České a Ukrajinské advokátní komory.',
+      text2: 'Úspěšně hájíme práva a svobody právnických i fyzických osob. Kolosální a často unikátní zkušenosti, jakož i vysoká kvalifikace našich pracovníků nám umožňují dosahovat výsledků, které maximálně odpovídají zájmům klienta.',
       experience: 'Let zkušeností',
       clients: 'Spokojených klientů',
       cases: 'Vyřešených případů',
       languages: 'Jazyků'
     },
+    trends: {
+      title: 'Hlavní směry činnosti',
+      subtitle: 'Tendence posledních let',
+      item1: 'Účast v soudech (složité trestní případy), zastupování klientů na policii',
+      item2: 'Odvolací činnost při řešení problémů s odmítnutím, prodloužením pobytu a občanství',
+      item3: 'Řešení problémů v bankách, odblokování bankovních účtů'
+    },
     team: {
       title: 'Náš tým',
       subtitle: 'Zkušení právníci připraveni vám pomoci',
       member1: {
-        name: 'JUDr. Anna Kušnarenková',
-        role: 'Zakladatelka a vedoucí partner',
-        bio: 'Specializace na obchodní a imigrační právo. Více než 25 let praxe.'
+        name: 'Mgr. Leonid Kušnarenko',
+        role: 'Zakladatel a vedoucí partner',
+        bio: 'Člen České a Ukrajinské advokátní komory. Více než 20 let praxe.'
       },
       member2: {
         name: 'Mgr. Pavel Novák',
@@ -95,7 +120,14 @@ const translations = {
         phone: 'Telefon',
         subject: 'Předmět',
         message: 'Zpráva',
-        send: 'Odeslat zprávu'
+        send: 'Odeslat zprávu',
+        need: 'Potřebuji'
+      },
+      needs: {
+        court: 'Účast v soudním jednání',
+        legal: 'Právní pomoc v případu',
+        consultation: 'Advokátská konzultace',
+        pretrial: 'Mimosoudní řízení'
       }
     },
     booking: {
@@ -118,15 +150,17 @@ const translations = {
       back: 'Zpět'
     },
     blog: {
-      title: 'Blog',
+      title: 'Publikace',
       subtitle: 'Právní novinky a články',
       readMore: 'Číst více',
-      noArticles: 'Zatím nejsou žádné články.'
+      noArticles: 'Zatím nejsou žádné články.',
+      archive: 'Archiv publikací'
     },
     footer: {
       rights: 'Všechna práva vyhrazena.',
       privacy: 'Ochrana soukromí',
-      terms: 'Obchodní podmínky'
+      terms: 'Obchodní podmínky',
+      chamber: 'Člen České advokátní komory'
     }
   },
   ru: {
@@ -135,62 +169,87 @@ const translations = {
       about: 'О нас',
       services: 'Услуги',
       team: 'Команда',
-      blog: 'Блог',
+      blog: 'Публикации',
       contact: 'Контакты',
       booking: 'Консультация'
     },
     hero: {
       title: 'Кушнаренко',
       titleHighlight: '& партнёры',
-      subtitle: 'Адвокатская контора в Праге с более чем 20-летним опытом в области корпоративного, иммиграционного и гражданского права.',
+      subtitle: 'Ваш личный адвокат в Праге. Член Чешской и Украинской палаты адвокатов с более чем 20-летним опытом в области корпоративного, иммиграционного и уголовного права.',
       cta: 'Записаться на консультацию',
       secondary: 'Наши услуги'
     },
+    features: {
+      experience: {
+        title: 'Большой опыт работы',
+        desc: 'Мы максимально используем накопленный адвокатский опыт. Главная цель - успех, выигрыш дела.'
+      },
+      services: {
+        title: 'Широкий спектр услуг',
+        desc: 'Мы предлагаем такой объем услуг, составляющие компоненты которых апробированы на практике.'
+      },
+      professionalism: {
+        title: 'Высокий профессионализм',
+        desc: 'Мы стремимся максимально привлекать для решения поставленных задач экспертов высокого уровня.'
+      }
+    },
     services: {
-      title: 'Наши услуги',
+      title: 'Мы предоставляем услуги',
       subtitle: 'Комплексные юридические услуги для физических и юридических лиц',
-      corporate: {
-        title: 'Корпоративное право',
-        desc: 'Регистрация компаний, слияния и поглощения, договорное право, коммерческие споры.'
+      courts: {
+        title: 'Чешское судопроизводство',
+        desc: 'Представительство в судебных процессах, апелляции, кассации.'
+      },
+      civil: {
+        title: 'Гражданские дела',
+        desc: 'Гражданско-правовые споры, возмещение ущерба, договорные отношения.'
+      },
+      housing: {
+        title: 'Недвижимость и жилищное право',
+        desc: 'Купля-продажа недвижимости, арендные отношения, ТСЖ.'
+      },
+      business: {
+        title: 'Бизнес адвокат',
+        desc: 'Регистрация компаний, слияния, поглощения, коммерческие споры.'
+      },
+      criminal: {
+        title: 'Уголовный адвокат',
+        desc: 'Защита в уголовных делах, представительство в полиции.'
       },
       immigration: {
         title: 'Иммиграционное право',
-        desc: 'Разрешения на работу, ПМЖ, гражданство, представительство в полиции по делам иностранцев.'
+        desc: 'Визы, ВНЖ, обжалование отказов, гражданство.'
       },
-      family: {
-        title: 'Семейное право',
-        desc: 'Разводы, алименты, опека над детьми, раздел имущества.'
-      },
-      criminal: {
-        title: 'Уголовное право',
-        desc: 'Защита в уголовных делах, представление интересов потерпевших.'
-      },
-      civil: {
-        title: 'Гражданское право',
-        desc: 'Недвижимость, наследство, возмещение ущерба, договорные отношения.'
-      },
-      labor: {
-        title: 'Трудовое право',
-        desc: 'Трудовые договоры, увольнения, трудовые споры.'
+      other: {
+        title: 'Другие отрасли права',
+        desc: 'Разблокировка банковских счетов, семейное право и другое.'
       }
     },
     about: {
-      title: 'О нашей фирме',
-      subtitle: 'Профессионализм. Доверие. Результаты.',
-      text1: 'Адвокатская контора «Кушнаренко и партнёры» была основана в 2003 году в Праге. С тех пор мы успешно представляли сотни клиентов со всего мира.',
-      text2: 'Наша цель — предоставлять юридические услуги высочайшего качества с индивидуальным подходом к каждому клиенту.',
+      title: 'Мы рады видеть вас',
+      subtitle: 'Благодарим за интерес к нашей работе!',
+      text1: 'Адвокат - Магистр права Леонид Кушнаренко – Mgr. Leonid Kushnarenko (Kušnarenko): Член Чешской и Украинской палаты адвокатов.',
+      text2: 'Мы успешно защищаем права и свободы юридических и физических лиц. Колоссальный и зачастую уникальный опыт, а также высокая квалификация наших сотрудников позволяют нам достигать результата, в максимальной степени отвечающего интересам клиента.',
       experience: 'Лет опыта',
       clients: 'Довольных клиентов',
       cases: 'Решённых дел',
       languages: 'Языков'
     },
+    trends: {
+      title: 'Основная направленность деятельности',
+      subtitle: 'Тенденции последних лет',
+      item1: 'Участие в судах (сложные уголовные дела), представление интересов клиентов в полиции',
+      item2: 'Апелляционная деятельность по решению проблем с отказами в получении, продлении ВНЖ и гражданства',
+      item3: 'Разрешение проблем в банках, разблокирование банковских счетов'
+    },
     team: {
       title: 'Наша команда',
       subtitle: 'Опытные юристы готовы вам помочь',
       member1: {
-        name: 'JUDr. Анна Кушнаренко',
+        name: 'Mgr. Леонид Кушнаренко',
         role: 'Основатель и управляющий партнёр',
-        bio: 'Специализация: корпоративное и иммиграционное право. Более 25 лет практики.'
+        bio: 'Член Чешской и Украинской палаты адвокатов. Более 20 лет практики.'
       },
       member2: {
         name: 'Mgr. Павел Новак',
@@ -223,7 +282,14 @@ const translations = {
         phone: 'Телефон',
         subject: 'Тема',
         message: 'Сообщение',
-        send: 'Отправить сообщение'
+        send: 'Отправить сообщение',
+        need: 'Мне необходимо'
+      },
+      needs: {
+        court: 'Участие в судебном заседании',
+        legal: 'Правовая помощь в деле',
+        consultation: 'Адвокатская консультация',
+        pretrial: 'Досудебное разбирательство'
       }
     },
     booking: {
@@ -246,15 +312,179 @@ const translations = {
       back: 'Назад'
     },
     blog: {
-      title: 'Блог',
+      title: 'Публикации',
       subtitle: 'Юридические новости и статьи',
       readMore: 'Читать далее',
-      noArticles: 'Статей пока нет.'
+      noArticles: 'Статей пока нет.',
+      archive: 'Архив публикаций'
     },
     footer: {
       rights: 'Все права защищены.',
       privacy: 'Политика конфиденциальности',
-      terms: 'Условия использования'
+      terms: 'Условия использования',
+      chamber: 'Член Чешской палаты адвокатов'
+    }
+  },
+  uk: {
+    nav: {
+      home: 'Головна',
+      about: 'Про нас',
+      services: 'Послуги',
+      team: 'Команда',
+      blog: 'Публікації',
+      contact: 'Контакти',
+      booking: 'Консультація'
+    },
+    hero: {
+      title: 'Кушнаренко',
+      titleHighlight: '& партнери',
+      subtitle: 'Ваш особистий адвокат у Празі. Член Чеської та Української палати адвокатів з понад 20-річним досвідом у галузі корпоративного, імміграційного та кримінального права.',
+      cta: 'Записатися на консультацію',
+      secondary: 'Наші послуги'
+    },
+    features: {
+      experience: {
+        title: 'Великий досвід роботи',
+        desc: 'Ми максимально використовуємо накопичений адвокатський досвід. Головна мета - успіх, виграш справи.'
+      },
+      services: {
+        title: 'Широкий спектр послуг',
+        desc: 'Ми пропонуємо такий обсяг послуг, складові компоненти яких апробовані на практиці.'
+      },
+      professionalism: {
+        title: 'Високий професіоналізм',
+        desc: 'Ми прагнемо максимально залучати для вирішення поставлених завдань експертів високого рівня.'
+      }
+    },
+    services: {
+      title: 'Ми надаємо послуги',
+      subtitle: 'Комплексні юридичні послуги для фізичних та юридичних осіб',
+      courts: {
+        title: 'Чеське судочинство',
+        desc: 'Представництво в судових процесах, апеляції, касації.'
+      },
+      civil: {
+        title: 'Цивільні справи',
+        desc: 'Цивільно-правові спори, відшкодування збитків, договірні відносини.'
+      },
+      housing: {
+        title: 'Нерухомість та житлове право',
+        desc: 'Купівля-продаж нерухомості, орендні відносини, ОСББ.'
+      },
+      business: {
+        title: 'Бізнес адвокат',
+        desc: 'Реєстрація компаній, злиття, поглинання, комерційні спори.'
+      },
+      criminal: {
+        title: 'Кримінальний адвокат',
+        desc: 'Захист у кримінальних справах, представництво в поліції.'
+      },
+      immigration: {
+        title: 'Імміграційне право',
+        desc: 'Візи, ПМП, оскарження відмов, громадянство.'
+      },
+      other: {
+        title: 'Інші галузі права',
+        desc: 'Розблокування банківських рахунків, сімейне право та інше.'
+      }
+    },
+    about: {
+      title: 'Ми раді вас бачити',
+      subtitle: 'Дякуємо за інтерес до нашої роботи!',
+      text1: 'Адвокат - Магістр права Леонід Кушнаренко – Mgr. Leonid Kushnarenko (Kušnarenko): Член Чеської та Української палати адвокатів.',
+      text2: 'Ми успішно захищаємо права і свободи юридичних та фізичних осіб. Колосальний і часто унікальний досвід, а також висока кваліфікація наших співробітників дозволяють нам досягати результату, який максимально відповідає інтересам клієнта.',
+      experience: 'Років досвіду',
+      clients: 'Задоволених клієнтів',
+      cases: 'Вирішених справ',
+      languages: 'Мов'
+    },
+    trends: {
+      title: 'Основна спрямованість діяльності',
+      subtitle: 'Тенденції останніх років',
+      item1: 'Участь у судах (складні кримінальні справи), представлення інтересів клієнтів у поліції',
+      item2: 'Апеляційна діяльність щодо вирішення проблем з відмовами в отриманні, продовженні ПМП та громадянства',
+      item3: 'Вирішення проблем у банках, розблокування банківських рахунків'
+    },
+    team: {
+      title: 'Наша команда',
+      subtitle: 'Досвідчені юристи готові вам допомогти',
+      member1: {
+        name: 'Mgr. Леонід Кушнаренко',
+        role: 'Засновник та керуючий партнер',
+        bio: 'Член Чеської та Української палати адвокатів. Понад 20 років практики.'
+      },
+      member2: {
+        name: 'Mgr. Павел Новак',
+        role: 'Партнер',
+        bio: 'Експерт з корпоративного права та M&A.'
+      },
+      member3: {
+        name: 'Mgr. Олена Соколова',
+        role: 'Асоційований партнер',
+        bio: 'Спеціалізація: цивільне та сімейне право.'
+      },
+      member4: {
+        name: 'JUDr. Мартін Черни',
+        role: 'Адвокат',
+        bio: 'Експерт з кримінального права та трудових спорів.'
+      }
+    },
+    contact: {
+      title: 'Контакти',
+      subtitle: 'Ми тут для вас',
+      address: 'Адреса',
+      addressText: 'Вацлавська площа 1, 110 00 Прага 1',
+      phone: 'Телефон',
+      email: 'Ел. пошта',
+      hours: 'Години роботи',
+      hoursText: 'Пн-Пт: 9:00 - 18:00',
+      form: {
+        name: "Ім'я",
+        email: 'Ел. пошта',
+        phone: 'Телефон',
+        subject: 'Тема',
+        message: 'Повідомлення',
+        send: 'Надіслати повідомлення',
+        need: 'Мені потрібно'
+      },
+      needs: {
+        court: 'Участь у судовому засіданні',
+        legal: 'Правова допомога у справі',
+        consultation: 'Адвокатська консультація',
+        pretrial: 'Досудове провадження'
+      }
+    },
+    booking: {
+      title: 'Записатися на консультацію',
+      subtitle: 'Оберіть зручний час',
+      step1: 'Особисті дані',
+      step2: 'Послуга',
+      step3: 'Дата та час',
+      step4: 'Підтвердження',
+      name: "Ім'я та прізвище",
+      email: 'Ел. пошта',
+      phone: 'Телефон',
+      service: 'Оберіть послугу',
+      date: 'Оберіть дату',
+      time: 'Оберіть час',
+      message: 'Опис вашої справи (необов\'язково)',
+      submit: 'Підтвердити запис',
+      success: 'Вашу заявку успішно надіслано. Ми зв\'яжемося з вами.',
+      next: 'Далі',
+      back: 'Назад'
+    },
+    blog: {
+      title: 'Публікації',
+      subtitle: 'Юридичні новини та статті',
+      readMore: 'Читати далі',
+      noArticles: 'Статей поки немає.',
+      archive: 'Архів публікацій'
+    },
+    footer: {
+      rights: 'Усі права захищені.',
+      privacy: 'Політика конфіденційності',
+      terms: 'Умови використання',
+      chamber: 'Член Чеської палати адвокатів'
     }
   },
   en: {
@@ -263,62 +493,87 @@ const translations = {
       about: 'About',
       services: 'Services',
       team: 'Team',
-      blog: 'Blog',
+      blog: 'Publications',
       contact: 'Contact',
       booking: 'Consultation'
     },
     hero: {
       title: 'Kushnarenko',
       titleHighlight: '& Partners',
-      subtitle: 'A law firm in Prague with over 20 years of experience in corporate, immigration, and civil law.',
+      subtitle: 'Your personal lawyer in Prague. Member of Czech and Ukrainian Bar Associations with over 20 years of experience in corporate, immigration, and criminal law.',
       cta: 'Book a Consultation',
       secondary: 'Our Services'
     },
+    features: {
+      experience: {
+        title: 'Extensive Experience',
+        desc: 'We maximize the use of accumulated legal experience. Main goal - success, winning the case.'
+      },
+      services: {
+        title: 'Wide Range of Services',
+        desc: 'We offer a volume of services whose components have been tested in practice.'
+      },
+      professionalism: {
+        title: 'High Professionalism',
+        desc: 'We strive to attract high-level experts to solve the tasks at hand.'
+      }
+    },
     services: {
-      title: 'Our Services',
+      title: 'We Provide Services',
       subtitle: 'Comprehensive legal services for individuals and businesses',
-      corporate: {
-        title: 'Corporate Law',
-        desc: 'Company formation, mergers & acquisitions, contract law, commercial disputes.'
+      courts: {
+        title: 'Czech Court Proceedings',
+        desc: 'Representation in court proceedings, appeals, cassations.'
+      },
+      civil: {
+        title: 'Civil Cases',
+        desc: 'Civil disputes, compensation for damages, contractual relations.'
+      },
+      housing: {
+        title: 'Real Estate & Housing Law',
+        desc: 'Purchase and sale of real estate, rental relations, HOA.'
+      },
+      business: {
+        title: 'Business Lawyer',
+        desc: 'Company registration, mergers, acquisitions, commercial disputes.'
+      },
+      criminal: {
+        title: 'Criminal Lawyer',
+        desc: 'Defense in criminal cases, representation with police.'
       },
       immigration: {
         title: 'Immigration Law',
-        desc: 'Work permits, permanent residence, citizenship, representation before foreign police.'
+        desc: 'Visas, residence permits, appeal rejections, citizenship.'
       },
-      family: {
-        title: 'Family Law',
-        desc: 'Divorces, alimony, child custody, property settlement.'
-      },
-      criminal: {
-        title: 'Criminal Law',
-        desc: 'Criminal defense, victim representation.'
-      },
-      civil: {
-        title: 'Civil Law',
-        desc: 'Real estate, inheritance, damage compensation, contractual relationships.'
-      },
-      labor: {
-        title: 'Labor Law',
-        desc: 'Employment contracts, terminations, labor disputes.'
+      other: {
+        title: 'Other Areas of Law',
+        desc: 'Bank account unblocking, family law, and more.'
       }
     },
     about: {
-      title: 'About Our Firm',
-      subtitle: 'Professionalism. Trust. Results.',
-      text1: 'Kushnarenko & Partners law firm was founded in 2003 in Prague. Since then, we have successfully represented hundreds of clients from around the world.',
-      text2: 'Our goal is to provide the highest quality legal services with an individual approach to each client.',
+      title: 'Welcome',
+      subtitle: 'Thank you for your interest in our work!',
+      text1: 'Attorney - Master of Law Leonid Kushnarenko – Mgr. Leonid Kushnarenko (Kušnarenko): Member of Czech and Ukrainian Bar Associations.',
+      text2: 'We successfully protect the rights and freedoms of legal entities and individuals. Our colossal and often unique experience, as well as the high qualifications of our staff, allow us to achieve results that best meet the interests of the client.',
       experience: 'Years of Experience',
       clients: 'Satisfied Clients',
       cases: 'Resolved Cases',
       languages: 'Languages'
     },
+    trends: {
+      title: 'Main Focus of Activity',
+      subtitle: 'Trends in Recent Years',
+      item1: 'Participation in courts (complex criminal cases), representing clients with police',
+      item2: 'Appeal activities to resolve problems with refusals in obtaining, extending residence permits and citizenship',
+      item3: 'Resolving problems in banks, unblocking bank accounts'
+    },
     team: {
       title: 'Our Team',
       subtitle: 'Experienced lawyers ready to help you',
       member1: {
-        name: 'JUDr. Anna Kushnarenko',
+        name: 'Mgr. Leonid Kushnarenko',
         role: 'Founder & Managing Partner',
-        bio: 'Specializing in corporate and immigration law. Over 25 years of practice.'
+        bio: 'Member of Czech and Ukrainian Bar Associations. Over 20 years of practice.'
       },
       member2: {
         name: 'Mgr. Pavel Novák',
@@ -351,7 +606,14 @@ const translations = {
         phone: 'Phone',
         subject: 'Subject',
         message: 'Message',
-        send: 'Send Message'
+        send: 'Send Message',
+        need: 'I need'
+      },
+      needs: {
+        court: 'Participation in court hearing',
+        legal: 'Legal assistance in case',
+        consultation: 'Attorney consultation',
+        pretrial: 'Pre-trial proceedings'
       }
     },
     booking: {
@@ -374,15 +636,17 @@ const translations = {
       back: 'Back'
     },
     blog: {
-      title: 'Blog',
+      title: 'Publications',
       subtitle: 'Legal news and articles',
       readMore: 'Read More',
-      noArticles: 'No articles yet.'
+      noArticles: 'No articles yet.',
+      archive: 'Publications Archive'
     },
     footer: {
       rights: 'All rights reserved.',
       privacy: 'Privacy Policy',
-      terms: 'Terms of Service'
+      terms: 'Terms of Service',
+      chamber: 'Member of Czech Bar Association'
     }
   }
 };
@@ -392,9 +656,9 @@ const LanguageContext = createContext();
 export const LanguageProvider = ({ children }) => {
   const [language, setLanguage] = useState(() => {
     if (typeof window !== 'undefined') {
-      return localStorage.getItem('language') || 'cs';
+      return localStorage.getItem('language') || 'ru';
     }
-    return 'cs';
+    return 'ru';
   });
 
   useEffect(() => {

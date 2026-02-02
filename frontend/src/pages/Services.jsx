@@ -14,75 +14,6 @@ import {
 const ServicesPage = () => {
   const { t } = useLanguage();
 
-  const services = [
-    { 
-      icon: Building2, 
-      key: 'corporate',
-      details: [
-        'Zakládání společností (s.r.o., a.s.)',
-        'Fúze a akvizice',
-        'Smluvní právo',
-        'Obchodní spory',
-        'Due diligence'
-      ]
-    },
-    { 
-      icon: Globe, 
-      key: 'immigration',
-      details: [
-        'Pracovní povolení',
-        'Trvalý pobyt',
-        'Občanství ČR',
-        'Zaměstnanecké karty',
-        'Zastupování před OAMP'
-      ]
-    },
-    { 
-      icon: Users, 
-      key: 'family',
-      details: [
-        'Rozvody',
-        'Výživné',
-        'Péče o děti',
-        'Majetkové vypořádání',
-        'Předmanželské smlouvy'
-      ]
-    },
-    { 
-      icon: Scale, 
-      key: 'criminal',
-      details: [
-        'Obhajoba v trestních řízeních',
-        'Zastupování poškozených',
-        'Hospodářské trestné činy',
-        'Přípravné řízení',
-        'Odvolací řízení'
-      ]
-    },
-    { 
-      icon: FileText, 
-      key: 'civil',
-      details: [
-        'Nemovitosti',
-        'Dědické řízení',
-        'Náhrada škody',
-        'Smluvní vztahy',
-        'Vymáhání pohledávek'
-      ]
-    },
-    { 
-      icon: Briefcase, 
-      key: 'labor',
-      details: [
-        'Pracovní smlouvy',
-        'Ukončení pracovního poměru',
-        'Pracovní spory',
-        'Kolektivní vyjednávání',
-        'Outplacement'
-      ]
-    }
-  ];
-
   return (
     <div className="min-h-screen pt-20" data-testid="services-page">
       {/* Hero */}
@@ -106,38 +37,53 @@ const ServicesPage = () => {
       <section className="py-20 md:py-32 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-            {services.map((service, index) => {
-              const Icon = service.icon;
-              return (
-                <div
-                  key={service.key}
-                  className="bg-[#FDFBF7] p-10 border-l-2 border-[#C5A059] hover:shadow-lg transition-all duration-500"
-                  data-testid={`service-detail-${service.key}`}
-                >
-                  <div className="flex items-start gap-6">
-                    <div className="w-16 h-16 bg-white flex items-center justify-center shrink-0">
-                      <Icon className="w-8 h-8 text-[#C5A059]" />
-                    </div>
-                    <div className="flex-1">
-                      <h3 className="font-['Playfair_Display'] text-2xl font-semibold text-[#0F172A] mb-3">
-                        {t(`services.${service.key}.title`)}
-                      </h3>
-                      <p className="text-gray-600 mb-6">
-                        {t(`services.${service.key}.desc`)}
-                      </p>
-                      <ul className="space-y-3">
-                        {service.details.map((detail, i) => (
-                          <li key={i} className="flex items-center gap-3">
-                            <CheckCircle className="w-4 h-4 text-[#C5A059] shrink-0" />
-                            <span className="text-gray-700 text-sm">{detail}</span>
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
-                  </div>
-                </div>
-              );
-            })}
+            {/* Corporate Law */}
+            <ServiceCard 
+              icon={Building2} 
+              titleKey="corporate"
+              details={['Zakládání společností (s.r.o., a.s.)', 'Fúze a akvizice', 'Smluvní právo', 'Obchodní spory', 'Due diligence']}
+              t={t}
+            />
+            
+            {/* Immigration Law */}
+            <ServiceCard 
+              icon={Globe} 
+              titleKey="immigration"
+              details={['Pracovní povolení', 'Trvalý pobyt', 'Občanství ČR', 'Zaměstnanecké karty', 'Zastupování před OAMP']}
+              t={t}
+            />
+            
+            {/* Family Law */}
+            <ServiceCard 
+              icon={Users} 
+              titleKey="family"
+              details={['Rozvody', 'Výživné', 'Péče o děti', 'Majetkové vypořádání', 'Předmanželské smlouvy']}
+              t={t}
+            />
+            
+            {/* Criminal Law */}
+            <ServiceCard 
+              icon={Scale} 
+              titleKey="criminal"
+              details={['Obhajoba v trestních řízeních', 'Zastupování poškozených', 'Hospodářské trestné činy', 'Přípravné řízení', 'Odvolací řízení']}
+              t={t}
+            />
+            
+            {/* Civil Law */}
+            <ServiceCard 
+              icon={FileText} 
+              titleKey="civil"
+              details={['Nemovitosti', 'Dědické řízení', 'Náhrada škody', 'Smluvní vztahy', 'Vymáhání pohledávek']}
+              t={t}
+            />
+            
+            {/* Labor Law */}
+            <ServiceCard 
+              icon={Briefcase} 
+              titleKey="labor"
+              details={['Pracovní smlouvy', 'Ukončení pracovního poměru', 'Pracovní spory', 'Kolektivní vyjednávání', 'Outplacement']}
+              t={t}
+            />
           </div>
         </div>
       </section>
@@ -155,24 +101,10 @@ const ServicesPage = () => {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-            {[
-              { num: '01', title: 'Konzultace', desc: 'Úvodní schůzka a analýza vašeho případu.' },
-              { num: '02', title: 'Strategie', desc: 'Návrh optimálního řešení a strategie.' },
-              { num: '03', title: 'Realizace', desc: 'Profesionální zastupování a realizace.' },
-              { num: '04', title: 'Výsledek', desc: 'Dosažení cílů a uzavření případu.' }
-            ].map((step, index) => (
-              <div key={index} className="text-center" data-testid={`process-step-${index}`}>
-                <span className="font-['Playfair_Display'] text-5xl font-bold text-[#C5A059]/30">
-                  {step.num}
-                </span>
-                <h3 className="font-['Playfair_Display'] text-xl font-semibold text-[#0F172A] mt-4 mb-3">
-                  {step.title}
-                </h3>
-                <p className="text-gray-600 text-sm">
-                  {step.desc}
-                </p>
-              </div>
-            ))}
+            <ProcessStep num="01" title="Konzultace" desc="Úvodní schůzka a analýza vašeho případu." />
+            <ProcessStep num="02" title="Strategie" desc="Návrh optimálního řešení a strategie." />
+            <ProcessStep num="03" title="Realizace" desc="Profesionální zastupování a realizace." />
+            <ProcessStep num="04" title="Výsledek" desc="Dosažení cílů a uzavření případu." />
           </div>
         </div>
       </section>
@@ -210,5 +142,48 @@ const ServicesPage = () => {
     </div>
   );
 };
+
+const ServiceCard = ({ icon: Icon, titleKey, details, t }) => (
+  <div
+    className="bg-[#FDFBF7] p-10 border-l-2 border-[#C5A059] hover:shadow-lg transition-shadow duration-500"
+    data-testid={`service-detail-${titleKey}`}
+  >
+    <div className="flex items-start gap-6">
+      <div className="w-16 h-16 bg-white flex items-center justify-center shrink-0">
+        <Icon className="w-8 h-8 text-[#C5A059]" />
+      </div>
+      <div className="flex-1">
+        <h3 className="font-['Playfair_Display'] text-2xl font-semibold text-[#0F172A] mb-3">
+          {t(`services.${titleKey}.title`)}
+        </h3>
+        <p className="text-gray-600 mb-6">
+          {t(`services.${titleKey}.desc`)}
+        </p>
+        <ul className="space-y-3">
+          {details.map((detail, i) => (
+            <li key={i} className="flex items-center gap-3">
+              <CheckCircle className="w-4 h-4 text-[#C5A059] shrink-0" />
+              <span className="text-gray-700 text-sm">{detail}</span>
+            </li>
+          ))}
+        </ul>
+      </div>
+    </div>
+  </div>
+);
+
+const ProcessStep = ({ num, title, desc }) => (
+  <div className="text-center" data-testid={`process-step-${num}`}>
+    <span className="font-['Playfair_Display'] text-5xl font-bold text-[#C5A059]/30">
+      {num}
+    </span>
+    <h3 className="font-['Playfair_Display'] text-xl font-semibold text-[#0F172A] mt-4 mb-3">
+      {title}
+    </h3>
+    <p className="text-gray-600 text-sm">
+      {desc}
+    </p>
+  </div>
+);
 
 export default ServicesPage;

@@ -1,41 +1,10 @@
 import { useLanguage } from '../contexts/LanguageContext';
 import { Link } from 'react-router-dom';
 import { Button } from '../components/ui/button';
-import { Mail, Phone, Linkedin } from 'lucide-react';
+import { Mail, Phone } from 'lucide-react';
 
 const TeamPage = () => {
   const { t } = useLanguage();
-
-  const team = [
-    {
-      key: 'member1',
-      image: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=800&h=1000&fit=crop',
-      email: 'kushnarenko@kushnarenko.cz',
-      phone: '+420 123 456 781',
-      specializations: ['Obchodní právo', 'Imigrační právo', 'M&A']
-    },
-    {
-      key: 'member2',
-      image: 'https://images.unsplash.com/photo-1556157382-97eda2d62296?w=800&h=1000&fit=crop',
-      email: 'novak@kushnarenko.cz',
-      phone: '+420 123 456 782',
-      specializations: ['Firemní právo', 'Fúze & akvizice', 'Due diligence']
-    },
-    {
-      key: 'member3',
-      image: 'https://images.unsplash.com/photo-1580489944761-15a19d654956?w=800&h=1000&fit=crop',
-      email: 'sokolova@kushnarenko.cz',
-      phone: '+420 123 456 783',
-      specializations: ['Občanské právo', 'Rodinné právo', 'Dědictví']
-    },
-    {
-      key: 'member4',
-      image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=800&h=1000&fit=crop',
-      email: 'cerny@kushnarenko.cz',
-      phone: '+420 123 456 784',
-      specializations: ['Trestní právo', 'Pracovní spory', 'Obhajoba']
-    }
-  ];
 
   return (
     <div className="min-h-screen pt-20" data-testid="team-page">
@@ -60,61 +29,38 @@ const TeamPage = () => {
       <section className="py-20 md:py-32 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {team.map((member, index) => (
-              <div 
-                key={member.key}
-                className="group"
-                data-testid={`team-member-${index}`}
-              >
-                {/* Image */}
-                <div className="relative overflow-hidden mb-6">
-                  <img
-                    src={member.image}
-                    alt={t(`team.${member.key}.name`)}
-                    className="w-full h-[400px] object-cover team-image"
-                  />
-                  
-                  {/* Overlay on hover */}
-                  <div className="absolute inset-0 bg-[#0F172A]/80 opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-center justify-center gap-4">
-                    <a 
-                      href={`mailto:${member.email}`}
-                      className="w-12 h-12 bg-[#C5A059] flex items-center justify-center hover:bg-[#D4AF37] transition-colors"
-                    >
-                      <Mail className="w-5 h-5 text-white" />
-                    </a>
-                    <a 
-                      href={`tel:${member.phone}`}
-                      className="w-12 h-12 bg-[#C5A059] flex items-center justify-center hover:bg-[#D4AF37] transition-colors"
-                    >
-                      <Phone className="w-5 h-5 text-white" />
-                    </a>
-                  </div>
-                </div>
-
-                {/* Info */}
-                <h3 className="font-['Playfair_Display'] text-xl font-semibold text-[#0F172A] mb-1">
-                  {t(`team.${member.key}.name`)}
-                </h3>
-                <p className="text-[#C5A059] text-sm font-medium mb-3">
-                  {t(`team.${member.key}.role`)}
-                </p>
-                <p className="text-gray-600 text-sm mb-4">
-                  {t(`team.${member.key}.bio`)}
-                </p>
-
-                {/* Specializations */}
-                <div className="flex flex-wrap gap-2">
-                  {member.specializations.map((spec, i) => (
-                    <span 
-                      key={i}
-                      className="text-xs bg-[#FDFBF7] text-[#0F172A] px-3 py-1 border border-black/5"
-                    >
-                      {spec}
-                    </span>
-                  ))}
-                </div>
-              </div>
-            ))}
+            <TeamMember 
+              memberKey="member1"
+              image="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=800&h=1000&fit=crop"
+              email="kushnarenko@kushnarenko.cz"
+              phone="+420 123 456 781"
+              specs={['Obchodní právo', 'Imigrační právo', 'M&A']}
+              t={t}
+            />
+            <TeamMember 
+              memberKey="member2"
+              image="https://images.unsplash.com/photo-1556157382-97eda2d62296?w=800&h=1000&fit=crop"
+              email="novak@kushnarenko.cz"
+              phone="+420 123 456 782"
+              specs={['Firemní právo', 'Fúze & akvizice', 'Due diligence']}
+              t={t}
+            />
+            <TeamMember 
+              memberKey="member3"
+              image="https://images.unsplash.com/photo-1580489944761-15a19d654956?w=800&h=1000&fit=crop"
+              email="sokolova@kushnarenko.cz"
+              phone="+420 123 456 783"
+              specs={['Občanské právo', 'Rodinné právo', 'Dědictví']}
+              t={t}
+            />
+            <TeamMember 
+              memberKey="member4"
+              image="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=800&h=1000&fit=crop"
+              email="cerny@kushnarenko.cz"
+              phone="+420 123 456 784"
+              specs={['Trestní právo', 'Pracovní spory', 'Obhajoba']}
+              t={t}
+            />
           </div>
         </div>
       </section>
@@ -135,17 +81,22 @@ const TeamPage = () => {
                 Každý člen týmu přináší jedinečné znalosti a zkušenosti.
               </p>
               <ul className="space-y-4">
-                {[
-                  'Více než 100 let kombinovaných zkušeností',
-                  'Absolventi předních právnických fakult',
-                  'Mezinárodní praxe a jazykové znalosti',
-                  'Pravidelné vzdělávání a certifikace'
-                ].map((item, i) => (
-                  <li key={i} className="flex items-center gap-3">
-                    <div className="w-2 h-2 bg-[#C5A059]" />
-                    <span className="text-[#0F172A]">{item}</span>
-                  </li>
-                ))}
+                <li className="flex items-center gap-3">
+                  <div className="w-2 h-2 bg-[#C5A059]" />
+                  <span className="text-[#0F172A]">Více než 100 let kombinovaných zkušeností</span>
+                </li>
+                <li className="flex items-center gap-3">
+                  <div className="w-2 h-2 bg-[#C5A059]" />
+                  <span className="text-[#0F172A]">Absolventi předních právnických fakult</span>
+                </li>
+                <li className="flex items-center gap-3">
+                  <div className="w-2 h-2 bg-[#C5A059]" />
+                  <span className="text-[#0F172A]">Mezinárodní praxe a jazykové znalosti</span>
+                </li>
+                <li className="flex items-center gap-3">
+                  <div className="w-2 h-2 bg-[#C5A059]" />
+                  <span className="text-[#0F172A]">Pravidelné vzdělávání a certifikace</span>
+                </li>
               </ul>
             </div>
 
@@ -193,5 +144,57 @@ const TeamPage = () => {
     </div>
   );
 };
+
+const TeamMember = ({ memberKey, image, email, phone, specs, t }) => (
+  <div className="group" data-testid={`team-member-${memberKey}`}>
+    {/* Image */}
+    <div className="relative overflow-hidden mb-6">
+      <img
+        src={image}
+        alt={t(`team.${memberKey}.name`)}
+        className="w-full h-[400px] object-cover team-image"
+      />
+      
+      {/* Overlay on hover */}
+      <div className="absolute inset-0 bg-[#0F172A]/80 opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-center justify-center gap-4">
+        <a 
+          href={`mailto:${email}`}
+          className="w-12 h-12 bg-[#C5A059] flex items-center justify-center hover:bg-[#D4AF37] transition-colors"
+        >
+          <Mail className="w-5 h-5 text-white" />
+        </a>
+        <a 
+          href={`tel:${phone}`}
+          className="w-12 h-12 bg-[#C5A059] flex items-center justify-center hover:bg-[#D4AF37] transition-colors"
+        >
+          <Phone className="w-5 h-5 text-white" />
+        </a>
+      </div>
+    </div>
+
+    {/* Info */}
+    <h3 className="font-['Playfair_Display'] text-xl font-semibold text-[#0F172A] mb-1">
+      {t(`team.${memberKey}.name`)}
+    </h3>
+    <p className="text-[#C5A059] text-sm font-medium mb-3">
+      {t(`team.${memberKey}.role`)}
+    </p>
+    <p className="text-gray-600 text-sm mb-4">
+      {t(`team.${memberKey}.bio`)}
+    </p>
+
+    {/* Specializations */}
+    <div className="flex flex-wrap gap-2">
+      {specs.map((spec, i) => (
+        <span 
+          key={i}
+          className="text-xs bg-[#FDFBF7] text-[#0F172A] px-3 py-1 border border-black/5"
+        >
+          {spec}
+        </span>
+      ))}
+    </div>
+  </div>
+);
 
 export default TeamPage;

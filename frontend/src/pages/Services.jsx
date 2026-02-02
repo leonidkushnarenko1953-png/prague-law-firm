@@ -8,7 +8,6 @@ import {
   Scale, 
   Briefcase, 
   FileText,
-  ArrowRight,
   CheckCircle
 } from 'lucide-react';
 

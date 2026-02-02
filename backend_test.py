@@ -111,7 +111,7 @@ class LawFirmAPITester:
             "PATCH",
             f"consultations/{self.consultation_id}/status",
             200,
-            data={"status": "confirmed"}
+            params={"status": "confirmed"}
         )
 
     def test_create_contact_message(self):

@@ -2,34 +2,63 @@ import { Link } from 'react-router-dom';
 import { useLanguage } from '../contexts/LanguageContext';
 import { Button } from '../components/ui/button';
 import { 
-  Building2, 
-  Globe, 
-  Users, 
   Scale, 
+  Building2, 
+  Home, 
   Briefcase, 
+  Shield, 
+  Globe,
   FileText,
   ArrowRight,
   Award,
-  CheckCircle
+  CheckCircle,
+  Zap,
+  Target,
+  Users
 } from 'lucide-react';
 
 const HomePage = () => {
   const { t } = useLanguage();
 
+  const features = [
+    { 
+      icon: Zap, 
+      title: t('features.experience.title'), 
+      desc: t('features.experience.desc') 
+    },
+    { 
+      icon: Target, 
+      title: t('features.services.title'), 
+      desc: t('features.services.desc') 
+    },
+    { 
+      icon: Users, 
+      title: t('features.professionalism.title'), 
+      desc: t('features.professionalism.desc') 
+    },
+  ];
+
   const services = [
-    { icon: Building2, key: 'corporate', color: 'bg-blue-50' },
-    { icon: Globe, key: 'immigration', color: 'bg-green-50' },
-    { icon: Users, key: 'family', color: 'bg-pink-50' },
-    { icon: Scale, key: 'criminal', color: 'bg-red-50' },
-    { icon: FileText, key: 'civil', color: 'bg-yellow-50' },
-    { icon: Briefcase, key: 'labor', color: 'bg-purple-50' },
+    { icon: Scale, key: 'courts' },
+    { icon: FileText, key: 'civil' },
+    { icon: Home, key: 'housing' },
+    { icon: Briefcase, key: 'business' },
+    { icon: Shield, key: 'criminal' },
+    { icon: Globe, key: 'immigration' },
+    { icon: Building2, key: 'other' },
   ];
 
   const stats = [
     { value: '20+', label: t('about.experience') },
-    { value: '500+', label: t('about.clients') },
-    { value: '1000+', label: t('about.cases') },
-    { value: '3', label: t('about.languages') },
+    { value: '1000+', label: t('about.clients') },
+    { value: '2000+', label: t('about.cases') },
+    { value: '4', label: t('about.languages') },
+  ];
+
+  const trends = [
+    t('trends.item1'),
+    t('trends.item2'),
+    t('trends.item3')
   ];
 
   return (
@@ -91,24 +120,32 @@ const HomePage = () => {
         </div>
       </section>
 
-      {/* Stats Section */}
-      <section className="bg-[#0F172A] py-16" data-testid="stats-section">
+      {/* Features Section */}
+      <section className="py-16 bg-white border-b border-black/5" data-testid="features-section">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-            {stats.map((stat, index) => (
-              <div 
-                key={index} 
-                className="text-center"
-                data-testid={`stat-${index}`}
-              >
-                <p className="font-['Playfair_Display'] text-4xl md:text-5xl font-bold text-[#C5A059] mb-2">
-                  {stat.value}
-                </p>
-                <p className="text-gray-400 text-sm uppercase tracking-wider">
-                  {stat.label}
-                </p>
-              </div>
-            ))}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {features.map((feature, index) => {
+              const Icon = feature.icon;
+              return (
+                <div 
+                  key={index} 
+                  className="flex items-start gap-4 p-6"
+                  data-testid={`feature-${index}`}
+                >
+                  <div className="w-12 h-12 bg-[#C5A059]/10 flex items-center justify-center shrink-0">
+                    <Icon className="w-6 h-6 text-[#C5A059]" />
+                  </div>
+                  <div>
+                    <h3 className="font-['Playfair_Display'] text-lg font-semibold text-[#0F172A] mb-2">
+                      {feature.title}
+                    </h3>
+                    <p className="text-gray-600 text-sm leading-relaxed">
+                      {feature.desc}
+                    </p>
+                  </div>
+                </div>
+              );
+            })}
           </div>
         </div>
       </section>
@@ -117,9 +154,6 @@ const HomePage = () => {
       <section className="py-20 md:py-32 bg-[#FDFBF7]" data-testid="services-section">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <p className="text-[#C5A059] text-sm uppercase tracking-widest font-semibold mb-4">
-              {t('hero.secondary')}
-            </p>
             <h2 className="font-['Playfair_Display'] text-4xl md:text-5xl font-semibold text-[#0F172A] mb-6">
               {t('services.title')}
             </h2>
@@ -132,13 +166,14 @@ const HomePage = () => {
             {services.map((service, index) => {
               const Icon = service.icon;
               return (
-                <div
+                <Link
                   key={service.key}
+                  to="/services"
                   className="bg-white p-8 border border-black/5 hover:border-[#C5A059]/30 transition-all duration-500 group relative overflow-hidden hover-lift"
                   data-testid={`service-card-${service.key}`}
                 >
-                  <div className={`w-14 h-14 ${service.color} flex items-center justify-center mb-6 group-hover:bg-[#C5A059]/10 transition-colors duration-300`}>
-                    <Icon className="w-7 h-7 text-[#0F172A]" />
+                  <div className="w-14 h-14 bg-[#FDFBF7] flex items-center justify-center mb-6 group-hover:bg-[#C5A059]/10 transition-colors duration-300">
+                    <Icon className="w-7 h-7 text-[#C5A059]" />
                   </div>
                   <h3 className="font-['Playfair_Display'] text-xl font-semibold text-[#0F172A] mb-3">
                     {t(`services.${service.key}.title`)}
@@ -146,17 +181,14 @@ const HomePage = () => {
                   <p className="text-gray-600 text-sm leading-relaxed mb-4">
                     {t(`services.${service.key}.desc`)}
                   </p>
-                  <Link 
-                    to="/services" 
-                    className="inline-flex items-center text-[#C5A059] text-sm font-semibold group-hover:gap-2 transition-all duration-300"
-                  >
+                  <span className="inline-flex items-center text-[#C5A059] text-sm font-semibold group-hover:gap-2 transition-all duration-300">
                     <span>{t('blog.readMore')}</span>
                     <ArrowRight className="w-4 h-4 ml-1" />
-                  </Link>
+                  </span>
                   
                   {/* Gold accent on hover */}
                   <div className="absolute bottom-0 left-0 w-full h-0.5 bg-[#C5A059] transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left" />
-                </div>
+                </Link>
               );
             })}
           </div>
@@ -189,7 +221,7 @@ const HomePage = () => {
               <p className="text-[#0F172A] text-xl font-medium mb-4">
                 {t('about.subtitle')}
               </p>
-              <p className="text-gray-600 leading-relaxed mb-6">
+              <p className="text-gray-600 leading-relaxed mb-4">
                 {t('about.text1')}
               </p>
               <p className="text-gray-600 leading-relaxed mb-8">
@@ -197,12 +229,14 @@ const HomePage = () => {
               </p>
 
               <div className="space-y-4 mb-8">
-                {['Individuální přístup', 'Profesionální tým', 'Výsledky'].map((item, i) => (
-                  <div key={i} className="flex items-center gap-3">
-                    <CheckCircle className="w-5 h-5 text-[#C5A059]" />
-                    <span className="text-[#0F172A] font-medium">{item}</span>
-                  </div>
-                ))}
+                <div className="flex items-center gap-3">
+                  <CheckCircle className="w-5 h-5 text-[#C5A059]" />
+                  <span className="text-[#0F172A] font-medium">{t('footer.chamber')}</span>
+                </div>
+                <div className="flex items-center gap-3">
+                  <CheckCircle className="w-5 h-5 text-[#C5A059]" />
+                  <span className="text-[#0F172A] font-medium">Член Української палати адвокатів</span>
+                </div>
               </div>
 
               <Link to="/about">
@@ -214,6 +248,61 @@ const HomePage = () => {
                 </Button>
               </Link>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Stats Section */}
+      <section className="bg-[#0F172A] py-16" data-testid="stats-section">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+            {stats.map((stat, index) => (
+              <div 
+                key={index} 
+                className="text-center"
+                data-testid={`stat-${index}`}
+              >
+                <p className="font-['Playfair_Display'] text-4xl md:text-5xl font-bold text-[#C5A059] mb-2">
+                  {stat.value}
+                </p>
+                <p className="text-gray-400 text-sm uppercase tracking-wider">
+                  {stat.label}
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Trends Section */}
+      <section className="py-20 md:py-32 bg-[#FDFBF7]" data-testid="trends-section">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <p className="text-[#C5A059] text-sm uppercase tracking-widest font-semibold mb-4">
+              {t('trends.subtitle')}
+            </p>
+            <h2 className="font-['Playfair_Display'] text-4xl md:text-5xl font-semibold text-[#0F172A]">
+              {t('trends.title')}
+            </h2>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {trends.map((trend, index) => (
+              <div 
+                key={index}
+                className="bg-white p-8 border-l-2 border-[#C5A059]"
+                data-testid={`trend-${index}`}
+              >
+                <div className="w-12 h-12 bg-[#C5A059]/10 flex items-center justify-center mb-4">
+                  <span className="font-['Playfair_Display'] text-xl font-bold text-[#C5A059]">
+                    {String(index + 1).padStart(2, '0')}
+                  </span>
+                </div>
+                <p className="text-[#0F172A] leading-relaxed">
+                  {trend}
+                </p>
+              </div>
+            ))}
           </div>
         </div>
       </section>

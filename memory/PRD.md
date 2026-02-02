@@ -65,3 +65,30 @@
 2. Create admin panel for consultation management
 3. Implement email notifications (SendGrid integration)
 4. Add full blog post detail page
+
+## Update (June 2, 2025 - v2)
+### Changes based on advokat-cz.info reference:
+- [x] Added **Ukrainian language** (4 languages total: CS, RU, UK, EN)
+- [x] Updated services to match reference:
+  - Чешское судопроизводство
+  - Гражданские дела
+  - Недвижимость и жилищное право
+  - Бизнес адвокат
+  - Уголовный адвокат
+  - Иммиграционное право
+  - Другие отрасли права
+- [x] Added Features section (Experience, Wide Range, Professionalism)
+- [x] Added Trends section highlighting main focus areas
+- [x] Updated hero text to include Czech & Ukrainian Bar membership
+- [x] Default language changed to Russian
+
+### Services Mapping (from advokat-cz.info):
+| Reference | Our Implementation |
+|-----------|-------------------|
+| Чешское судопроизводство | courts |
+| Адвокат по гражданским делам | civil |
+| Недвижимость и жилищное право | housing |
+| Бизнес адвокат | business |
+| Уголовный адвокат | criminal |
+| Адвокат по иммиграционному праву | immigration |
+| Другие отрасли права | other |

@@ -16,7 +16,7 @@ import { CheckCircle, User, Briefcase, Calendar as CalendarIcon, Check } from 'l
 import { toast } from 'sonner';
 import axios from 'axios';
 import { format } from 'date-fns';
-import { cs, ru, enUS } from 'date-fns/locale';
+import { cs, ru, uk, enUS } from 'date-fns/locale';
 
 const BACKEND_URL = process.env.REACT_APP_BACKEND_URL;
 const API = `${BACKEND_URL}/api`;
@@ -37,7 +37,7 @@ const BookingPage = () => {
     message: ''
   });
 
-  const locales = { cs, ru, en: enUS };
+  const locales = { cs, ru, uk, en: enUS };
 
   const services = [
     { value: 'courts', label: t('services.courts.title') },

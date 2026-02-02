@@ -27,7 +27,7 @@ class LawFirmAPITester:
             elif method == 'POST':
                 response = requests.post(url, json=data, headers=headers)
             elif method == 'PATCH':
-                response = requests.patch(url, json=data, headers=headers)
+                response = requests.patch(url, json=data, headers=headers, params=params)
 
             success = response.status_code == expected_status
             if success:
